@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="org.example.jenkins.my-shared-lib.main" target="1.8" />
-      <module name="org.example.jenkins.my-shared-lib.test" target="1.8" />
+      <module name="com.github.poulad.jenkins.my-shared-lib.main" target="1.8" />
+      <module name="com.github.poulad.jenkins.my-shared-lib.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
