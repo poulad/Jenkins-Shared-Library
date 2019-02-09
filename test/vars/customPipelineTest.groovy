@@ -4,7 +4,7 @@ import com.lesfurets.jenkins.unit.BaseRegressionTest
 import org.junit.Before
 import org.junit.Test
 
-class FooTest extends BaseRegressionTest {
+class customPipelineTest extends BaseRegressionTest {
 
    @Override
    @Before
@@ -16,10 +16,8 @@ class FooTest extends BaseRegressionTest {
 
    @Test
    void configured() throws Exception {
-      helper.registerAllowedMethod('bar', [String.class], { println it })
-
-      def script = loadScript('vars/foo.groovy')
-      script.call('bar')
+      def script = loadScript('vars/customPipeline.groovy')
+      script.call('ls -lah')
 
       printCallStack()
       testNonRegression("configured")
