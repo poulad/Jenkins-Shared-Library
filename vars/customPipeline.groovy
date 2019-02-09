@@ -1,5 +1,4 @@
 import com.github.poulad.jenkins.ShellExecutor
-import com.github.poulad.jenkins.WorkflowSteps
 
 def call(String args) {
    //noinspection GroovyAssignabilityCheck
@@ -9,8 +8,7 @@ def call(String args) {
          stage('Shell Command') {
             steps {
                script {
-                  echo args
-                  ShellExecutor.exec(this.steps as WorkflowSteps, "LABEL: ${args}", [args], false)
+                  ShellExecutor.exec(this.steps, "LABEL: ${args}", args)
                }
             }
          }

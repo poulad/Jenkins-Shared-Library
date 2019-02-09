@@ -37,31 +37,50 @@ repositories {
 dependencies {
    compile 'org.codehaus.groovy:groovy-all:2.4.8'
 
-   compile group: 'org.jenkins-ci.main', name: 'jenkins-core', version: '2.162', ext: 'jar'
+   compile 'org.jenkins-ci.main:jenkins-core:2.162@jar'
 
-   testCompile group: 'junit', name: 'junit', version: '4.12'
+   testCompile 'junit:junit:4.12'
 
    // Jenkins plugins
-   compile group: 'org.jenkins-ci.plugins', name: 'credentials', version: '2.1.13', ext: 'jar'
-   compile group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '1.13', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins', name: 'credentials', version: '2.1.13', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '1.13', ext: 'jar'
+//
+//   compile 'org.jenkins-ci:symbol-annotation:1.17@jar'
+//   compile 'org.jenkins-ci.plugins:structs:1.17@jar'
+//   compile 'org.jenkins-ci.plugins:script-security:1.25@jar'
+//   compile 'org.jenkins-ci.plugins:vsphere-cloud:1.1.11@jar'
+//   compile 'org.jenkins-ci.plugins:config-file-provider:2.15.4@jar'
+//   compile 'org.jenkinsci.plugins:managed-scripts:1.3@jar'
+//   compile 'org.jenkins-ci.plugins:cloudbees-folder:5.12@jar'
+//   compile 'org.jenkins-ci.plugins:matrix-auth:1.3@jar'
+//   compile 'org.jenkins-ci.plugins:nested-view:1.14@jar'
+//   compile 'org.jenkins-ci.plugins:Exclusion:0.11@jar'
+//   compile 'org.jenkins-ci.plugins:credentials:2.1.10@jar'
+//   compile 'org.jenkins-ci.main:jenkins-test-harness:2.7@jar'
+//   compile 'org.kohsuke.stapler:stapler-groovy:1.256@jar'
+//   compile('org.kohsuke:groovy-sandbox:1.20@jar') { // workaround for JENKINS-35412
+//      exclude group: 'org.codehaus.groovy'
+//   }
+//
+//   compile 'org.jenkins-ci.plugins:structs:1.17@jar'
+//
+//   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-cps', version: '2.63', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-cps-global-lib', version: '2.12', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-api', version: '2.33', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-step-api', version: '2.19', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-basic-steps', version: '2.14', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-support', version: '3.1', ext: 'jar'
+//   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-aggregator', version: '2.5', ext: 'jar'
+////   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-durable-task-step', version: '2.29', ext: 'jar'
+////   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-stm', version: '0.1-beta-3', ext: 'jar'
+////   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-job', version: '2.31', ext: 'jar'
+////   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-pom', version: '1.15', ext: 'jar'
+////   compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-scm-step', version: '2.7', ext: 'jar'
+//
+//   compile group: 'org.apache.maven', name: 'maven-model', version: '3.6.0'
 
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-cps', version: '2.63', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-cps-global-lib', version: '2.12', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-api', version: '2.33', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-step-api', version: '2.19', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-basic-steps', version: '2.14', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-support', version: '3.1', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-aggregator', version: '2.5', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-durable-task-step', version: '2.29', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-stm', version: '0.1-beta-3', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-job', version: '2.31', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-pom', version: '1.15', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-scm-step', version: '2.7', ext: 'jar'
-
-   compile group: 'org.apache.maven', name: 'maven-model', version: '3.3.9'
-
-   testCompile group: 'com.lesfurets', name: 'jenkins-pipeline-unit', version: '1.1'
-   testCompile group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4'
+   testCompile 'com.lesfurets:jenkins-pipeline-unit:1.1'
+   testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
 
    // TRICKY: The lib folder contains all other plugins *JAR* files
    // if not found in Maven
