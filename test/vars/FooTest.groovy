@@ -6,20 +6,22 @@ import org.junit.Test
 
 class FooTest extends BaseRegressionTest {
 
-  @Override
-  @Before
-  void setUp() throws Exception {
-    super.setUp()
+   @Override
+   @Before
+   void setUp() throws Exception {
+      super.setUp()
 
-    callStackPath = "test/vars/callstacks/"
-  }
+      callStackPath = "test/vars/callstacks/"
+   }
 
-  @Test
-  void configured() throws Exception {
-    def script = loadScript('vars/foo.groovy')
-    script.call('bar')
+   @Test
+   void configured() throws Exception {
+      helper.registerAllowedMethod('bar', [String.class], { println it })
 
-    printCallStack()
-    testNonRegression("configured")
-  }
+      def script = loadScript('vars/foo.groovy')
+      script.call('bar')
+
+      printCallStack()
+      testNonRegression("configured")
+   }
 }
